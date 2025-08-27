@@ -1,4 +1,4 @@
-package com.livetrackr.auth_service;
+package com.courierx.auth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
