@@ -28,7 +28,7 @@ public class JwtUtil {
 		return Jwts.builder()
 				.setSubject(username)
 				.setIssuedAt(new Date())
-				.setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY))  // 3 hours
+				.setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY))  // 1 hours
 				.signWith(key, SignatureAlgorithm.HS256)
 				.compact();
 	}
