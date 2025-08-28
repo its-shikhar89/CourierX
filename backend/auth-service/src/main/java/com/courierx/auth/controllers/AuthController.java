@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.courierx.auth.dto.LoginResponse;
 import com.courierx.auth.services.AuthService;
 
 import lombok.RequiredArgsConstructor;
@@ -24,7 +25,7 @@ public class AuthController {
 	}
 	
 	@PostMapping("/login")
-	public String login(@RequestBody Map<String, String> body) {
+	public LoginResponse login(@RequestBody Map<String, String> body) {
 		return authService.login(body.get("username"), body.get("password"));
 	}
 }

@@ -26,7 +26,7 @@ export default function Navbar() {
           ) : (
             <>
               <Link className="px-3 py-1 rounded hover:bg-gray-100" to="/login">Login</Link>
-              <Link className="px-3 py-1 rounded hover:bg-gray-100" to="/register">Register</Link>
+              <Link className="px-3 py-1 rounded hover:bg-gray-100" to="/signup">Register</Link>
             </>
           )}
         </div>

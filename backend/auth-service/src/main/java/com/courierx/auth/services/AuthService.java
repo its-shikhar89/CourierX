@@ -1,6 +1,8 @@
 package com.courierx.auth.services;
 
+import com.courierx.auth.dto.LoginResponse;
+
 public interface AuthService {
 	public String signup(String username, String password, String role);
-	public String login(String username, String password);
+	public LoginResponse login(String username, String password);
 }
