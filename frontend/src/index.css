@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* tiny helper styles */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Use Tailwind classes in your components instead of CSS properties */
+/* If you must use CSS, use these values: */
+body {
+  @apply bg-zinc-50 text-zinc-800;
+}

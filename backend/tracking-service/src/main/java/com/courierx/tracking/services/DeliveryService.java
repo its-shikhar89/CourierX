@@ -6,9 +6,10 @@ import com.courierx.tracking.model.Delivery;
 
 public interface DeliveryService {
 	
-	public Delivery createDelivery(String username, Delivery d);
-	public List<Delivery> getUserDeliveries(String username);
-	public Delivery assignRider(Long deliveryId, String riderName);
+	public Delivery createDelivery(Long userId, Delivery d);
+	public List<Delivery> getUserDeliveries(Long userId);
+	public Delivery assignRider(Long deliveryId, Long riderId);
 	public Delivery updateStatus(Long deliveryId, String status);
 	
+	public Object getDeliveryLocation(Long deliveryId);
 }

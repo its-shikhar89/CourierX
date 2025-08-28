@@ -17,9 +17,16 @@ public class JwtUtil {
         this.key = Keys.hmacShaKeyFor(secret.getBytes());
     }
     
-    public String extractUsername(String token) {
-    	return Jwts.parserBuilder().setSigningKey(key).build()
-    			.parseClaimsJws(token).getBody().getSubject();
+    private Claims extractAllClaims(String token) {
+        return Jwts.parserBuilder()
+                .setSigningKey(key)
+                .build()
+                .parseClaimsJws(token)
+                .getBody();
+    }
+    
+    public Long extractUserId(String token) {
+    	return extractAllClaims(token).get("userId", Long.class);
     }
     
     public boolean isValid(String token) {

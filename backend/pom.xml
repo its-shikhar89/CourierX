@@ -18,9 +18,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <!-- <module>auth-service</module>
+        <module>auth-service</module>
         <module>rider-service</module>
-        <module>tracking-service</module> -->
+        <module>tracking-service</module>
         <!-- later: ws-service, notification-service, etc. -->
         <module>courierx-common</module>
     </modules>

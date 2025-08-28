@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.courierx.auth.services.AuthService;
 
+import lombok.RequiredArgsConstructor;
+
 @RestController
 @RequestMapping("/auth")
+@RequiredArgsConstructor
 public class AuthController {
-	@Autowired
-	private AuthService authService;
+	private final AuthService authService;
 	
 	@PostMapping("/signup")
 	public String signup(@RequestBody Map<String, String> body) {
